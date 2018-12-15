@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Any Time Is Train Time</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <header class="jumbotron">
+            <h1 class="display-4">Any Time Is Train Time</h1>
+
+            <p>A comprehensive and very accurent Train Schedule</p>
+        </header>
+
+        <div id="current-time"></div>
+
+        <div class="list-group mb-4" id="train-list">
+            <div class="list-group-item list-group-item-secondary"> <i class="fas fa-users"></i> Train Schedule</div>
+            <div class="list-group-item">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" id="trainName">Train Name</th>
+                            <th scope="col" id="trainDestination">Destination</th>
+                            <th scope="col" id="trainFrequency">Frequency (min)</th>
+                            <th scope="col" id="trainArrival">Next Arrival</th>
+                            <th scope="col" id="trainAway">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+
+        <div class="list-group mb-4" id="search-form">
+            <div class="list-group-item list-group-item-secondary">
+                <i class="fas fa-plus-square"></i></i> Add  Train</div>
+            <form class="list-group-item">
+                <div class="form-group">
+                    <label for="train-name">Train Name</label>
+                    <textarea class="form-control" id="train-name" rows="1"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <textarea class="form-control" id="destination" rows="1"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="first-train">First Train Time (HH:mm - military time)</label>
+                    <input class="form-control" id="first-train" rows="1"></input>
+                </div>
+
+                <div class="form-group">
+                    <label for="min-freq">Frequency (min)</label>
+                    <input class="form-control" id="min-freq" rows="1"></input>
+                </div>
+
+
+
+
+                <button type="submit" class="btn btn-primary" id="add-train"> <i class="fas fa-plus-circle"></i> Submit</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/logicTrain.js"></script>
+
+</body>
+
+</html>
