@@ -1,2 +1,2 @@
-# Employee_mamagment
-Week 7 Class Activity - Employee Management application using firebase
+# Train Schedule
+Week 7 Class Activity - Train Schedule application using firebase
